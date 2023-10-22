@@ -18,7 +18,6 @@ function storeData() {
     password: form.password.value,
   };
   users.push(user);
-
   form.reset();
 }
 
@@ -37,8 +36,6 @@ function validateForm() {
   // Check if passwords match
   if (password1El.value === password2El.value) {
     passwordsMatch = true;
-    password1El.style.borderBottom = "rgb(0, 119, 0)";
-    password2El.style.borderBottom = "rgb(0, 119, 0)";
   } else {
     passwordsMatch = false;
     password1El.style.borderBottom = "rgb(184, 0, 0)";
