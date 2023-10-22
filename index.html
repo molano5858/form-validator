@@ -11,16 +11,31 @@
     <div class="container">
       <h1>Sign up!!</h1>
       <!-- Form -->
-      <form id="form">
+      <form id="form" novalidate>
         <!-- Full Name -->
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input type="text" id="name" placeholder="Your Full Name" required />
+          <input
+            type="text"
+            id="name"
+            placeholder="Your Full Name"
+            required
+            minlength="3"
+            maxlength="100"
+            name="name"
+          />
         </div>
         <!-- Phone Number -->
         <div class="form-group">
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="888-888-8888" required />
+          <input
+            type="tel"
+            id="phone"
+            placeholder="888-888-8888"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            name="phone"
+          />
         </div>
         <!-- Email -->
         <div class="form-group">
@@ -30,6 +45,7 @@
             id="email"
             placeholder="email@email.com"
             required
+            name="email"
           />
         </div>
         <!-- Website URL -->
@@ -40,6 +56,7 @@
             id="website"
             placeholder="https://felipe.com"
             required
+            name="website"
           />
         </div>
         <!-- Password -->
@@ -48,8 +65,10 @@
           <input
             type="password"
             id="password1"
-            placeholder="Create your password"
+            placeholder="Create your password (Min 8 Characters)"
             required
+            title="Please include at least 1 uppercase, 1 lowercase and 1 number"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
           />
         </div>
         <!-- Confirm Password -->
@@ -60,6 +79,8 @@
             id="password2"
             placeholder="Confirm your password"
             required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            name="password"
           />
         </div>
         <!-- Submit button -->

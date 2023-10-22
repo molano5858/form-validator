@@ -84,7 +84,15 @@ button {
   cursor: pointer;
 }
 input::placeholder {
-  color: rgb(233, 233, 233);
+  color: rgba(233, 233, 233, 0.6);
+}
+input:focus {
+  background-color: none;
+}
+input:-internal-autofill-selected {
+  background-color: initial;
+  border: initial;
+  color: initial;
 }
 
 input:valid {
@@ -92,7 +100,7 @@ input:valid {
 }
 
 input:invalid {
-  border-bottom: 2px solid rgb(119, 0, 0);
+  border-bottom: 2px solid rgb(184, 0, 0);
 }
 
 button {
