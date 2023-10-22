@@ -38,8 +38,8 @@ function validateForm() {
     passwordsMatch = true;
   } else {
     passwordsMatch = false;
-    password1El.style.borderBottom = "rgb(184, 0, 0)";
-    password2El.style.borderBottom = "rgb(184, 0, 0)";
+    password1El.style.borderBottom = "2px solid rgb(184, 0, 0)";
+    password2El.style.borderBottom = "2px solid rgb(184, 0, 0)";
     messageContainer.style.borderColor = "rgb(184, 0, 0)";
     messageEl.textContent = "Please Make sure passwords match.";
     return;
